@@ -48,7 +48,15 @@ Media::Media(int identifiant, const string &titre, const string &auteur, int ann
     annee(annee)
 {}
 
+Media::~Media()
+{
+
+}
+
 void Media::afficher()
 {
-    cout<<"| "<<setw(7)<<identifiant<<setw(37)<<" | "<<titre<<setw(26)<<" | "<<auteur<<setw(8)<<" | "<<annee<<" |"<<endl;
+    cout << "|"<<setw(7)<<left<<identifiant<<" | "
+         << setw(37) <<titre << " | "<<
+            setw(26) <<auteur <<" | "<<
+            setw(8)  <<annee << " | ";
 }
